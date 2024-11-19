@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="170" Width="300">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Name="LeftPanel" Width="100" Background="BurlyWood">
+            <Label>Label 1</Label>
+            <Label>Label 2</Label>
+            <Label>Label 3</Label>
+            <Label>Label 4</Label>
+            <Button Margin="3" Click="Me_Click">클릭</Button>
+        </StackPanel>
+        
+       <!-- 불투명도 (opacity) : 0~1사이의 값을 이용해서 투명도를 나타낸다.
+            0은 완전 투명, 1은 완전 불투명
+        
+            IsHitTestVIsible : 기본값은 True인 경우 마우스 이벤트에 대한 응답
+                                Fales인 경우 마우스 동작이 완전히 무시된다. (클릭 안됨.)
+        -->
+        
+        <StackPanel Grid.Column="1">
+            <Button Margin="3" Click="Button_Click">Visibility</Button>
+            <Button Margin="3" Click="IsVisible_Click">IsVisible</Button>
+            <Button Margin="3" Click="Opacity_Click">Opacity</Button>
+            <Button Margin="3" Click="IsHitTestVisible_Click">IsHitTestVisible</Button>
+            <Button Margin="3" Click="IsEnabled_Click">IsEnabled</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
