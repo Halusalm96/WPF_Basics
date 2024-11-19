@@ -17,7 +17,6 @@
             <Label>Label 1</Label>
             <Label>Label 2</Label>
             <Label>Label 3</Label>
-            <Label>Label 4</Label>
             <Button Margin="3" Click="Me_Click">클릭</Button>
         </StackPanel>
         
